@@ -1,0 +1,65 @@
+body {
+    margin-top: 100px;
+    background-color: #666;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    position: relative;
+    z-index: -1;
+    background-color: #fff;
+    height: 2px;
+    width: 195px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.progress {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    background-color: red;
+    transform-origin: center left;
+    transition: width .5s;
+}
+.num {
+   position: relative;
+   z-index: 2;
+   font-size: 14px;
+   background-color: white;
+   color: #000;
+   border-radius: 100%;
+   width: 10px;
+   height: 10px;
+   padding: 4px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: border .5s;
+}
+
+.btn {
+    margin-top: 40px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+.btn:active {
+   transform: scale(.98);
+}
+.one {
+    outline: 2px solid red;
+}
+.btn:disabled {
+    background-color: #fff;
+    color: black;
+}
+.btn:disabled.btn:active {
+    transform: scaleX(1);
+}

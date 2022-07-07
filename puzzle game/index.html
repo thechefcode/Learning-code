@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Image Puzzle Game</title>
 </head>
 <body>
     
     <div class="container">
-            <span><img src="hard1.png"></span>
-            <span><img src="hard2.png"></span>
-            <span><img src="hard3.png"></span>
-            <span><img src="hard4.png"></span>
-            <span><img src="hard5.png"></span>
-            <span><img src="hard6.png"></span>
-            <span><img src="hard7.png"></span>
-            <span><img src="hard8.png"></span>
-            <span><img src="hard9.png"></span>
+        <div class="piece_container first" draggable ="true"><span class="piece">1</span></div>
+        <div class="piece_container second" draggable ="true"><span class="piece">2</span></div>
+        <div class="piece_container third" draggable ="true"><span class="piece">3</span></div>
+        <div class="piece_container fourth" draggable ="true"><span class="piece">4</span></div>
+        <div class="piece_container fifth" draggable ="true"><span class="piece">5</span></div>
+        <div class="piece_container sixth" draggable ="true"><span class="piece">6</span></div>
+        <div class="piece_container seventh" draggable ="true"><span class="piece">7</span></div>
+        <div class="piece_container eighth" draggable ="true"><span class="piece">8</span></div>
+        <div class="empty" draggable ="true"></div>
+        <div class="win_screen">
+            <p>Congratulations, you won</p>
+            <button class="restart btn">Restart</button>
+        </div>
     </div>
     
 

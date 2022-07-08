@@ -3,7 +3,7 @@ body {
     background-image: linear-gradient(to right, black 300px, rgb(60, 13, 104));
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
 }
 .container {
     position: relative;
@@ -28,10 +28,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-.container .empty {
-    transition: all 7s;
-}
-
 .container .win_screen {
     position: absolute;
     background-color: grey;
@@ -57,4 +53,13 @@ button {
 }
 button:active {
     transform: scale(.98);
+}
+.btn {
+    position: relative;
+    z-index: 1;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    grid-row: 4;
+    grid-column: 1 / 4;
+    margin-top: 20px;
 }

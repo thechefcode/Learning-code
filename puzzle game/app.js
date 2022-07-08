@@ -2,27 +2,48 @@
 const pieceContainers = Array.from(document.querySelectorAll('.piece_container'))
 const emptyContainer = document.querySelector('.empty')
 const pieces = Array.from(document.querySelectorAll('.piece'))
-const restartBtn = document.querySelector('.restart')
+const restartBtn = document.querySelectorAll('.restart')
 let winScreen = document.querySelector('.win_screen');
 
-window.addEventListener('load', generateRandomInterface)
-restartBtn.addEventListener('click', generateRandomInterface)
+window.addEventListener('load', generateInitialInterface)
+restartBtn[0].addEventListener('click', generateNewInterface)
+restartBtn[1].addEventListener('click', generateNewInterface)
 
 
-function generateRandomInterface() {
-    if (winScreen.style.display == 'flex') {
-        winScreen.style.display = 'none'
-    }
-    let randomNumbers = []
-    while (randomNumbers.length < 8) { 
-        let r = Math.floor(Math.random() * 8) + 1
-        if (randomNumbers.indexOf(r) === -1) randomNumbers.push(r)
+function generateInitialInterface() {
+    let randNums = []
+    while (randNums.length < 8) { 
+        let randNum = Math.floor(Math.random() * 8) + 1
+        if (randNums.indexOf(randNum) === -1) randNums.push(randNum)
     }
     
     for (let i = 0; i < pieces.length; i++) {
-        pieces[i].innerText = randomNumbers[i]    
+        pieces[i].innerText = randNums[i]
+    }
+
+    let randomNumbers = []
+    while (randomNumbers.length < 8) { 
+        let randomNumber = Math.floor(Math.random() * 8)
+        if (randomNumbers.indexOf(randomNumber) === -1) randomNumbers.push(randomNumber)
+    }
+    
+    for (let i = 0; i < pieces.length; i++) {
+        pieceContainers[i].appendChild(pieces[randomNumbers[i]])
     }
     window.addEventListener('keydown', controls)
+
+
+}
+
+function generateNewInterface() {
+    if (winScreen.style.display == 'flex') {
+        winScreen.style.display = 'none'
+    }
+    emptyContainer.innerHTML = '';
+    for (i = 0; i < pieceContainers.length; i++) {
+        pieceContainers[i].innerHTML = '';
+    }
+    generateInitialInterface()
 }
 
 

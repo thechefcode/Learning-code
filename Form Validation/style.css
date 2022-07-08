@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    color: white;
+}
+form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+button {
+    margin-top: 10px;
+}

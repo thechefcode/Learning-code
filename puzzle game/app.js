@@ -31,8 +31,7 @@ function generateInitialInterface() {
         pieceContainers[i].appendChild(pieces[randomNumbers[i]])
     }
     window.addEventListener('keydown', controls)
-
-
+    restartBtn[1].style.display = 'block'
 }
 
 function generateNewInterface() {
@@ -100,6 +99,7 @@ function checkWin() {
         pieceContainers[4].innerText == 5 && pieceContainers[5].innerText == 6 && 
         pieceContainers[6].innerText == 7 && pieceContainers[7].innerText == 8) {
        
+        restartBtn[1].style.display = 'none'
         window.removeEventListener('keydown',controls)
         setTimeout(() => {
             winScreen.style.display = 'flex'

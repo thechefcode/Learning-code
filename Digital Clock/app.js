@@ -13,7 +13,7 @@ minutes.innerHTML = myDate.getMinutes();
 seconds.innerHTML = myDate.getSeconds();
 
 let currentMinute = myDate.getMinutes() * 6 + 90;
-let currentHour = myDate.getHours() * 6 + 90 ;
+let currentHour = myDate.getHours() * 6 + 170 ;
 let currentSecond = myDate.getSeconds() * 6 + 90;
 
 // The main clock functioning

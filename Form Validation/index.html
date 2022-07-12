@@ -8,15 +8,47 @@
     <title>Form Validation</title>
 </head>
 <body>
-    
-     <form id="form" action="">
-        <label for="">Email or Phone</label>
-        <input id="email" type="email" type="tel" name="text">
-        <label for="">Password</label>
-        <input id="password" type="password" name="password">
-        <button>Submit</button>
-        <div id="feedback"></div>
-     </form>
+     <div class="container">
+        <div class="signin">
+            <div>
+                <h2>Welcome</h2>
+                <p>You are 30 seconds away <br> from earning your own money!</p>
+            </div>
+            <button>Login</button>
+        </div>
+
+        <div class="signup">
+            <div class="choice"><span class="employee active">Employee</span><span class="hirer">Hirer</span></div>
+            <h2>Apply as an Employee</h2>
+            <form>
+                <div class="texts">
+                    <input type="text" id="name" name="name" placeholder="First Name*">
+                    <input type="text" id="surname" name="surname" placeholder="Last Name*">
+                    <input type="password" id="password" name="password" placeholder="Password*">
+                    <input type="password" id="confirm" name="confirm" placeholder="Confirm Password*">
+                    <input type="email" id="email" name="email" placeholder="Your Email*">
+                    <input type="tel" id="tel" name="tel" placeholder="Your Phone*">
+                    <select name="security" id="security">
+                        <option value="0">Please select your sequrity Question</option>
+                        <option value="1">Mother's maiden name</option>
+                        <option value="2">Your birth year</option>
+                        <option value="3">Most embarassing moment</option>
+                        <option value="4">High school favourit teacher</option>
+                    </select>
+                    <input type="text" id="answers" name="answers" placeholder="Enter youre answer">
+                    </div>
+               
+                <div>
+                    <input type="radio" name="gender" value="Male">Male
+                    <input type="radio" name="gender" value="Female">Female
+                </div>
+                <input type="button" value="Register">
+                <div id="feedback"></div>
+            </form>
+        </div>
+     </div>
+
+
     <script src="index.js"></script>
 </body>
 </html>

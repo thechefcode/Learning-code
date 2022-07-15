@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="data_backup_page">
+    
+    <div class="data_container">
+        <div class="data_backup">
+            <img src="data.png" alt="data">
+            <h3>Data Backup</h3>
+        </div>
+        <div class="data_import">
+            <img src="data.png" alt="data">
+            <h3>Data import</h3>
+        </div>
+        <div class="auto_data_backup">
+            <h3>Automatic Backup</h3>
+            <div id="auto"><span id="selector"></span></div>
+            <p>All your data are automatically backed up when exiting the application.
+                To succefully da data backup your notes, you need to exit the application normally.
+            </p>
+            <p><small>THe backup file will be saved on phone. It is recommended that you keep this file before you reset your phone or switch to another phone to avoid losing your notes</small></p>
+        </div>
+        <div id="popup1" class="popup">
+            <p>All your data will be backed up, if you have a backup, it will
+                be overwritten. Do you want to confirm?
+                <button id="noOption">No</button>
+                <button id="yesOption">Yes</button>
+            </p>
+        </div>
+        <div id="popup2" class="popup">
+            <p>The file you last backed up will be uploaded. All data(notes, passwords, color, text settings) in
+                the application will be replaced with the backed-up file.
+                Do you want to confirm?
+                <div>
+                    <button id="noOption">No</button>
+                    <button id="yesOption">Yes</button>
+                </div>
+            </p>
+        </div>
+        <div id="backUp">Data Successfully Backed up</div>
+    </div>
+    <script src="app.js"></script>
+    <script src="data.js"></script>
+</body>
+</html>

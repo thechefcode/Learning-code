@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #eee;
+    font-family: sans-serif;
+}
+
+.nav {
+    background-color: skyblue;
+    width: 100vw;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+input {
+    background-color: transparent;
+    border: 0;
+    padding: 0 10px;
+}
+input:focus {
+    border: none;
+    outline: 0;
+}
+input::placeholder {
+    transform: translateX(10px);
+    color: green;
+}
+
+#sortBtn {
+    width: 20px;
+    height: 10px;
+    transform: translateX(120px);
+}
+#sortBtn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 2px;
+    background-color: #fff;
+}
+
+#sortBtn span:nth-child(2) {
+    width: 75%;
+    margin: 2px auto;
+}
+#sortBtn span:nth-child(3) {
+    margin: 2px auto;
+    width: 40%;
+}
+
+#sortContainer {
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    top: 20%;
+    bottom: 45%;
+    
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    display: none;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+form p {
+    margin: 10px 0;
+}
+.box_burger {
+    width: 20px;
+    height: 20px;
+    transform: translateX(150px);
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 3px);
+    gap: 1px;
+}
+.box_burger span {
+    display: block;
+    width: 5px;
+    background-color: #fff;
+}
+.list_burger {
+    width: 20px;
+    height: 20px;
+    transform: translateX(150px);
+    display: none;
+}
+.list_burger span {
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    margin-top: 3px;
+}
+
+.notes.primary {
+   margin: 10px 0 30px 5px;
+}
+.note.primary {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 5px;
+}
+.note.primary span {
+    display: block;
+    background-color: #999;
+    width: 55px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+.note.primary span:nth-child(2) {
+    background-color: black;
+    color: #fff;
+    padding: 3px 0;
+    font-style: italic;
+}
+.note.primary div:nth-child(2) {
+    height: 55px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.note.primary p {
+    width: 300px;
+    overflow: hidden;
+   
+}
+.note.primary small {
+    display: block;
+    width: 300px;
+    height: 60px;
+    margin-top: 5px;
+    overflow: hidden; 
+}
+
+.notes.secondary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+
+    margin-top: 10px;
+}
+
+.notes.secondary p {
+    height: 38px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.notes.secondary .date {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    padding: 0 5px;
+}
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: -130px 0;
+    padding: 20px;
+
+    position: relative;
+    left: 80%;
+    top: 500px;
+    background-color: skyblue;
+    color: #fff;
+
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+#sortContainer {
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    top: 20%;
+    bottom: 45%;
+    
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    display: none;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+form p {
+    margin: 10px 0;
+}

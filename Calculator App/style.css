@@ -25,6 +25,7 @@ body {
     align-items: center;
     border-radius: 5px;
     padding: 0 10px;
+    overflow: hidden;
 }
 .btns {
     background-color: rgb(76, 79, 92);

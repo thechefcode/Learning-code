@@ -10,7 +10,8 @@
 <body class="view_page">
     <div class="container">
         <div class="nav">
-            <input type="search" id="searchBtn" placeholder="search">
+            <input type="search" id="searchInput" placeholder="search">
+            <input type="button" id="searchBtn" onclick="searchNotes()" value="search" style="border: 1px solid green;">
             <div id="sortBtn"><span></span><span></span><span></span></div>
             <div id="sortContainer">
                 <form>
@@ -39,24 +40,10 @@
                 <span></span>
             </div>
         </div>
-        <div class="notes primary">
-            <div class="note primary">
-                <div class="date"><span>09</span><span>July</span><span>2022</span></div>
-                <div id="noteOverview">
-                    <p>My first note that i wrote to test my skilss as a web developer in javascript</p>
-                    <p id="small"><small>This is my first note in this gallery....</small></p>
-                </div>
-            </div>
-            <div class="note primary">
-                <div class="date"><span>09</span><span>July</span><span>2022</span></div>
-                <div id="noteOverview">
-                    <p>My first note that i wrote to test my skilss as a web developer in javascript</p>
-                    <p id="small"><small>This is my first note in this gallery....</small></p>
-                </div>
-            </div>
-        </div>
+        <div class="notes primary"></div>
         <a href="write.html">+</a>
     </div>
+    <script src="functions.js"></script>
     <script src="app.js"></script>
     <script src="view.js"></script>
 </body>

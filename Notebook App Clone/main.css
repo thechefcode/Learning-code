@@ -11,14 +11,18 @@ body {
 .nav {
     background-color: skyblue;
     width: 100vw;
-    height: 30px;
+    /* height: 30px; */
     display: flex;
     align-items: center;
+    padding: 6px 0;
 }
 input {
-    background-color: transparent;
+    background-color: #f6f6f6;
+    
     border: 0;
-    padding: 0 10px;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
 }
 input:focus {
     border: none;

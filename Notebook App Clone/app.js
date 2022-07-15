@@ -10,12 +10,13 @@ const selector = document.getElementById('selector');
 const boxBurger = document.querySelector('.box_burger');
 const listBurger = document.querySelector('.list_burger');
 const notes = document.querySelector('.notes');
-const note = document.querySelectorAll('.note');
+let note = document.querySelectorAll('.note');
 const date = document.querySelectorAll('.date');
 const sortBtn = document.getElementById('sortBtn')
 const sortContainer = document.getElementById('sortContainer')
 let noteOverview = document.querySelectorAll('#noteOverview');
 let small = document.querySelectorAll('#small');
+
 
 // PASSWORD SETTINGS PAGE
 const formSaveBtn = document.getElementById('formSaveBtn');
@@ -30,8 +31,9 @@ const form = document.getElementById('form');
 // WRITE PAGE
 
 const noteSaveBtn = document.getElementById('noteSaveBtn');
-const noteInput = document.getElementById('noteInput');
+//const noteInput = document.getElementById('noteInput');
 const title = document.getElementById('title');
+
 
    
 

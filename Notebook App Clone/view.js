@@ -1,34 +1,65 @@
-    boxBurger.addEventListener('click', () => {
+   function renderNotes(note) {
+    
+    let date = new Date(note.date)
+    let dateContainer = document.createElement('div');
+    dateContainer.className = 'date'
+    let noteElement = document.createElement('div');
+    noteElement.setAttribute('class', 'note primary');
+    let day = document.createElement('span');
+    let month = document.createElement('span');
+    let year = document.createElement('span');
+    day.textContent = date.getDate();
+    month.textContent = date.toLocaleString('default',{month: 'long'});
+    year.textContent = date.getFullYear();
+    dateContainer.appendChild(day)
+    dateContainer.appendChild(month)
+    dateContainer.appendChild(year)
+    
+    let noteOverview = document.createElement('div');
+    let title = document.createElement('p');
+    title.textContent = note.title;
+    let small = document.createElement('p');
+    small.textContent = note.content;
+    
+    noteOverview.appendChild(title)
+    noteOverview.appendChild(small)
+    
+    noteElement.appendChild(dateContainer);
+    noteElement.appendChild(noteOverview);
+
+    // notes.appendChild(noteElement);
+    notes.innerHTML = noteElement.innerHTML;
+   }
+
+   function init () { boxBurger.addEventListener('click', () => {
     listBurger.style.display = 'block';
     boxBurger.style.display = 'none';
+    
+    const nt = document.querySelectorAll('.note')
+    for (i = 0; i < nt.length; i++) {
+        nt[i].classList.remove('primary');
+    }
 
     notes.classList.remove('primary');
-    note[0].classList.remove('primary');
-    note[1].classList.remove('primary');
     notes.classList.add('secondary');
-
-    noteOverview[0].removeChild(small[0]);
-    noteOverview[1].removeChild(small[1]);
-
-    note[0].insertBefore(noteOverview[0], date[0])
-    note[1].insertBefore(noteOverview[1], date[1])
 })
+
 listBurger.addEventListener('click', () => {
-    boxBurger.style.display = 'grid';
-    listBurger.style.display = 'none';
-    
+
+    const nt = document.querySelectorAll('.note')
+    for (i = 0; i < nt.length; i++) {
+        nt[i].classList.add('primary');
+    }
     notes.classList.add('primary');
-    note[0].classList.add('primary');
-    note[1].classList.add('primary');
     notes.classList.remove('secondary');
 
-    noteOverview[0].appendChild(small[0]);
-    noteOverview[1].appendChild(small[1]);
-    
-    note[0].insertBefore(date[0], noteOverview[0])
-    note[1].insertBefore(date[1], noteOverview[1])
+
+
+    boxBurger.style.display = 'grid';
+    listBurger.style.display = 'none';
    
 })
+   }
 
 sortBtn.addEventListener('click', () => {
     if (sortContainer.style.display === 'block') {
@@ -37,3 +68,63 @@ sortBtn.addEventListener('click', () => {
         sortContainer.style.display = 'block';
     }
 })
+window.onload = function () {
+    if (localStorage['savedNotes']) {
+        let savedNotes = JSON.parse(localStorage['savedNotes']);
+        console.log(savedNotes);
+        savedNotes.forEach(note => {
+            let date = new Date(note.date)
+            let dateContainer = document.createElement('div');
+            dateContainer.className = 'date'
+            let noteElement = document.createElement('div');
+            noteElement.setAttribute('class', 'note primary');
+            let day = document.createElement('span');
+            let month = document.createElement('span');
+            let year = document.createElement('span');
+            day.textContent = date.getDate();
+            month.textContent = date.toLocaleString('default',{month: 'long'});
+            year.textContent = date.getFullYear();
+            dateContainer.appendChild(day)
+            dateContainer.appendChild(month)
+            dateContainer.appendChild(year)
+            
+            let noteOverview = document.createElement('div');
+            let title = document.createElement('p');
+            title.textContent = note.title;
+            let small = document.createElement('p');
+            small.textContent = note.content;
+            
+            noteOverview.appendChild(title)
+            noteOverview.appendChild(small)
+            
+            noteElement.appendChild(dateContainer);
+            noteElement.appendChild(noteOverview);
+
+            notes.appendChild(noteElement)
+        });
+        
+    } else {
+        notes.textContent = 'No notes Found'
+    }
+   
+    init()
+}
+
+function searchNotes() {
+    if (searchInput.value != '') {
+        if (localStorage['savedNotes']) {
+            let savedNotes = JSON.parse(localStorage['savedNotes']);
+            console.log(savedNotes)
+            let seachedNotes = [];
+            savedNotes.forEach(note => {
+                if (searchInput.value == note.title) {
+                        // seachedNotes.push(note);
+                        renderNotes(note);
+                } 
+            })
+            if (seachedNotes.length > 0) {
+                console.log(seachedNotes)
+            }
+        } 
+    }
+}
